@@ -9,13 +9,15 @@ import java.util.UUID;
 
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
+import static javax.persistence.CascadeType.ALL;
 import static javax.persistence.FetchType.EAGER;
+import static javax.persistence.GenerationType.SEQUENCE;
 
 @Entity(name = "event_streams")
 class EventStream {
 
     @Id
-    @GeneratedValue(generator = "event_stream_seq", strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(generator = "event_stream_seq", strategy = SEQUENCE)
     @SequenceGenerator(name = "event_stream_seq", sequenceName = "event_stream_seq", allocationSize = 1)
     private Long id;
 
@@ -27,7 +29,7 @@ class EventStream {
     @Column(nullable = false)
     private long version;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = EAGER)
+    @OneToMany(cascade = ALL, orphanRemoval = true, fetch = EAGER)
     private List<EventDescriptor> events = new ArrayList<>();
 
     private EventStream() {
