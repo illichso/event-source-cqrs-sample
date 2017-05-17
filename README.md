@@ -1,3 +1,11 @@
+## CI Build Statuses
+| Linux          | macOS          |
+|----------------|----------------|
+|[![Linux][1]][2]|[![macOS][1]][2]|
+
+[1]: https://travis-ci.org/illichso/event-source-cqrs-sample.svg?branch=master
+[2]: https://travis-ci.org/illichso/event-source-cqrs-sample
+
 [![Conference recommends](https://devternity.com/shields/recommends.svg)](https://devternity.com)
 
 
