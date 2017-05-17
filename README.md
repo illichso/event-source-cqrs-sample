@@ -1,7 +1,7 @@
 ## CI Build Statuses
 | Linux          |
 |----------------|
-|[![Linux][1]]   |
+|[![Linux][1]][2]|
 
 [1]: https://travis-ci.org/illichso/event-source-cqrs-sample.svg?branch=master
 [2]: https://travis-ci.org/illichso/event-source-cqrs-sample
