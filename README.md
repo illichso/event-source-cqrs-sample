@@ -1,10 +1,11 @@
 ## CI Build Statuses
 | Linux          |
 |----------------|
-|[![Linux][1]][2]|
+|[![Linux][1]]   |
 
 [1]: https://travis-ci.org/illichso/event-source-cqrs-sample.svg?branch=master
 [2]: https://travis-ci.org/illichso/event-source-cqrs-sample
+
 
 # Sample event sourced application with Command Query Responsibility Segregation
 
