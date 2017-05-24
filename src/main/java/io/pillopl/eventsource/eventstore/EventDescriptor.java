@@ -5,11 +5,14 @@ import lombok.Getter;
 import javax.persistence.*;
 import java.time.Instant;
 
+import static java.time.Instant.now;
+import static javax.persistence.GenerationType.SEQUENCE;
+
 @Entity(name = "event_descriptors")
 class EventDescriptor {
 
     @Id
-    @GeneratedValue(generator = "event_descriptors_seq", strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(generator = "event_descriptors_seq", strategy = SEQUENCE)
     @SequenceGenerator(name = "event_descriptors_seq", sequenceName = "event_descriptors_seq", allocationSize = 1)
     @Getter
     private Long id;
@@ -20,7 +23,7 @@ class EventDescriptor {
 
     @Getter
     @Column(nullable = false, name = "occurred_at")
-    private Instant occurredAt = Instant.now();
+    private Instant occurredAt = now();
 
     @Getter
     @Column(nullable = false, length = 60)
